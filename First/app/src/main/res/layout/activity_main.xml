@@ -34,5 +34,5 @@
         android:text="Button"
         android:onClick="onClick"
         android:layout_below="@+id/textView"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,OnClick" />
 </RelativeLayout>
