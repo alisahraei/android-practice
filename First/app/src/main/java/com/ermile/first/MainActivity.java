@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ali = findViewById(R.id.textView);
         //ali.setText("alisahraei");
         date = findViewById(R.id.date);
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 randomTextColor();
             }
         });
+
 //        button.setOnClickListener(this);
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -131,4 +133,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
+
 }

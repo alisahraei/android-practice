@@ -10,7 +10,7 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.form_info);
         Toast.makeText(this, "SecondActivity: onCreate", Toast.LENGTH_SHORT).show();
     }
     @Override
