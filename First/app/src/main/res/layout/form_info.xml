@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/form_info"
+    android:id="@+id/forminfo"
     android:layout_margin="10dp">
 
     <LinearLayout
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text="share may phone number"
+        android:text="share my phone number"
         tools:ignore="InefficientWeight" />
 <!--        android:layout_weight="1"-->
 
@@ -60,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/icon_email"
+            app:srcCompat="@drawable/email_icon"
             android:layout_weight="1"
             />
 
