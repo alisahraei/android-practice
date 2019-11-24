@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -157,7 +158,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 //        getMenuInflater().inflate(R.menu.menu_main, menu);
-          menu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        SubMenu intentSubmenu = menu.addSubMenu("intent options");
+          intentSubmenu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
               @Override
               public boolean onMenuItemClick(MenuItem item) {
                   Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -166,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   return false;
               }
           });
-          menu.add("send sms").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+          intentSubmenu.add("send sms").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
               @Override
               public boolean onMenuItemClick(MenuItem item) {
                   Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -176,12 +178,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   return false;
               }
           });
-          menu.add("open dialer").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+          intentSubmenu.add("open dialer").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
               @Override
               public boolean onMenuItemClick(MenuItem item) {
                   Intent intent = new Intent(Intent.ACTION_DIAL);
                   intent.setData(Uri.parse("tel:09123456879"));
                   startActivity(intent);
+                  return false;
+              }
+          });
+          SubMenu mediadsubmenu = menu.addSubMenu("Media");
+          mediadsubmenu.add("Imageview").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  startActivity(new Intent(MainActivity.this, ImageViewActivity.class));
                   return false;
               }
           });
