@@ -1,10 +1,12 @@
 package com.ermile.first;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.URI;
 import java.util.Date;
 import java.util.Random;
 
@@ -21,12 +24,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    TextView ali;
 //    TextView date;
 //    Button button;
-
+    public static final int REQ_CODE = 12;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FormInfo form = new FormInfo(this, R.id.forminfos);
+        final FormInfo form = new FormInfo(this, R.id.forminfos);
+        form.getInput_name().setTextColor(Color.rgb(255, 120, 0));
+        form.getSubmit().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = form.getInput_phone().getText().toString().trim();
+                String email = form.getInput_email().getText().toString().trim();
+                String name = form.getInput_name().getText().toString().trim();
+
+                if (form.isValdINput(null, null, null)){
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    intent.putExtra("name", name);
+                    intent.putExtra("email", email);
+                    if (form.getCheckBox().isChecked()){
+                        intent.putExtra("phone", phone);
+                    }
+                    startActivityForResult(intent, REQ_CODE);
+                }
+            }
+        });
 //        ali = findViewById(R.id.textView);
         //ali.setText("alisahraei");
 //        date = findViewById(R.id.date);
@@ -78,10 +100,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                return true;
 //            }
 //        });
-        Toast.makeText(this, "MainActivity: onCreate", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "MainActivity: onCreate", Toast.LENGTH_SHORT).show();
     }
 
-//    @Override
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQ_CODE && resultCode == RESULT_OK){
+                Toast.makeText(this, data.getStringExtra("message"), Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+    //    @Override
 //    protected void onStart() {
 //        super.onStart();
 //        Toast.makeText(this, "MainActivity: onStart", Toast.LENGTH_SHORT).show();
@@ -125,7 +156,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+          menu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  Intent intent = new Intent(Intent.ACTION_VIEW);
+                  intent.setData(Uri.parse("http:..www.ermile.com"));
+                  startActivity(intent);
+                  return false;
+              }
+          });
+          menu.add("send sms").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  Intent intent = new Intent(Intent.ACTION_VIEW);
+                  intent.setData(Uri.parse("sms:09123456789"));
+                  intent.putExtra("sms_body", "hello world");
+                  startActivity(intent);
+                  return false;
+              }
+          });
+          menu.add("open dialer").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  Intent intent = new Intent(Intent.ACTION_DIAL);
+                  intent.setData(Uri.parse("tel:09123456879"));
+                  startActivity(intent);
+                  return false;
+              }
+          });
+
+
 //        menu.add("myitem1");
 //        menu.add("myitem2");
 //        SubMenu submenu = menu.addSubMenu("myitem3");
@@ -134,11 +195,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @Override
     public void onClick(View v) {

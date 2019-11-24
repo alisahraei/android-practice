@@ -37,12 +37,34 @@ class FormInfo implements View.OnClickListener, CompoundButton.OnCheckedChangeLi
         checkBox.setOnCheckedChangeListener(this);
     }
 
+    public EditText getInput_name() {
+        return input_name;
+    }
+
+    public EditText getInput_phone() {
+        return input_phone;
+    }
+
+    public EditText getInput_email() {
+        return input_email;
+    }
+
+    public CheckBox getCheckBox() {
+        return checkBox;
+    }
+
+    public Button getSubmit() {
+        return submit;
+    }
+
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if (buttonView.getId() == checkBox.getId()){
             input_phone.setEnabled(isChecked);
         }
     }
+
+
     @Override
     public void onClick(View view) {
         if(view.getId() == submit.getId()){
@@ -62,7 +84,15 @@ class FormInfo implements View.OnClickListener, CompoundButton.OnCheckedChangeLi
         }
     }
 
-    private boolean isValdINput(String name, String phone, String email) {
+    public boolean isValdINput(String name, String phone, String email) {
+        if (name == null)
+            name = input_name.getText().toString().trim();
+        if (email == null)
+            email = input_email.getText().toString().trim();
+        if (phone == null)
+            phone = input_phone.getText().toString().trim();
+
+
         if (name.length() <3){
             Toast.makeText(activity, "3 character", Toast.LENGTH_SHORT).show();
             input_name.requestFocus();

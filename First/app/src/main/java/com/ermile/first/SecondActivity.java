@@ -3,7 +3,10 @@ package com.ermile.first;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +37,23 @@ public class SecondActivity extends AppCompatActivity {
             TextView.append("Email:" + email + "\n");
         }
         Toast.makeText(this, "SecondActivity: onCreate", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuItem itemOk = menu.add("OK");
+        itemOk.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        itemOk.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem itemOk) {
+                Intent intent = new Intent();
+                intent.putExtra("message" , "it's ok");
+                setResult(RESULT_OK, intent);
+                finish();
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
     }
 }
 
