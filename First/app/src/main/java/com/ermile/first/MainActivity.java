@@ -202,6 +202,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   return false;
               }
           });
+          mediadsubmenu.add("audio player").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  startActivity(new Intent(MainActivity.this, AudioActivity.class));
+                  return false;
+              }
+          });
 
 
 //        menu.add("myitem1");
