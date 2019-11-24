@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ImageViewActivity"></activity>
+        <activity android:name=".VideoViewActivity"></activity>
+        <activity android:name=".ImageViewActivity" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

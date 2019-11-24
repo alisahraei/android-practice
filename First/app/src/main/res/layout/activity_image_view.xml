@@ -7,19 +7,13 @@
     tools:context=".ImageViewActivity">
 
     <ImageView
-        android:id="@+id/iv_pingpong"
+        android:id="@+id/iv_anime"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
         android:layout_centerInParent="true"
         android:alpha="1"
-        app:srcCompat="@drawable/images" />
-    <ImageView
-        android:id="@+id/iv_golf"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitCenter"
-        android:layout_centerInParent="true"
-        android:alpha="0"
-        app:srcCompat="@drawable/golf" />
+        app:srcCompat="@drawable/anime2"
+        android:onClick="animate"/>
+
 </RelativeLayout>

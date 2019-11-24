@@ -195,6 +195,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   return false;
               }
           });
+          mediadsubmenu.add("vdeoview").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  startActivity(new Intent(MainActivity.this, VideoViewActivity.class));
+                  return false;
+              }
+          });
 
 
 //        menu.add("myitem1");
