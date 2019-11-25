@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".AudioActivity"></activity>
+        <activity android:name=".play_ground"></activity>
+        <activity android:name=".connect_duz" />
+        <activity android:name=".AudioActivity" />
         <activity android:name=".VideoViewActivity" />
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".SecondActivity" />

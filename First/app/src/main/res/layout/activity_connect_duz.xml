@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".connect_duz">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        app:columnCount="3"
+        app:rowCount="3"
+        android:background="@drawable/table"
+        >
+
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="TODO"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="135dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/o" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="5dp"
+            android:onClick="dropIn"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/x" />
+
+        <ImageView
+            android:layout_margin="5dp"
+
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="2"
+            app:layout_row="2"
+            app:srcCompat="@drawable/x" />
+    </androidx.gridlayout.widget.GridLayout>
+</RelativeLayout>

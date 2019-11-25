@@ -19,7 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        //mavanCentral()
+//        mavanCentral()
         //when jcenter not work in device change to mavenCentral
     }
 }

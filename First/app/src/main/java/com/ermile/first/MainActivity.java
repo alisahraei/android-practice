@@ -209,6 +209,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   return false;
               }
           });
+          mediadsubmenu.add("connect3").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+              @Override
+              public boolean onMenuItemClick(MenuItem item) {
+                  startActivity(new Intent(MainActivity.this, play_ground.class));
+                  return false;
+              }
+          });
 
 
 //        menu.add("myitem1");
