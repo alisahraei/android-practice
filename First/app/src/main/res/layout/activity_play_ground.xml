@@ -19,26 +19,29 @@
         android:orientation="horizontal"
         android:layout_weight="1">
 
-        <ImageView
-            android:layout_margin="1dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="dropIn" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:onClick="dropIn"
+                android:tag="0" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:onClick="dropIn"
+                android:tag="1" />
 
         <ImageView
             android:layout_margin="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
-
-        <ImageView
-            android:layout_margin="1dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="2"/>
     </LinearLayout>
 
     <LinearLayout
@@ -51,21 +54,25 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="3"/>
+
 
         <ImageView
             android:layout_margin="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="4"/>
 
         <ImageView
             android:layout_margin="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="5"/>
     </LinearLayout>
 
     <LinearLayout
@@ -78,21 +85,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="6"/>
 
         <ImageView
             android:layout_margin="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="7"/>
 
         <ImageView
             android:layout_margin="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="dropIn"/>
+            android:onClick="dropIn"
+            android:tag="8"/>
     </LinearLayout>
 
     </LinearLayout>
