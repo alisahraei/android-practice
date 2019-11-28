@@ -12,7 +12,8 @@
         android:layout_height="300dp"
         android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:background="@drawable/table">
+        android:background="@drawable/table"
+        android:id="@+id/pg_layout">
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -106,4 +107,36 @@
     </LinearLayout>
 
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="#FF7F00"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/msg_layout"
+        >
+        <TextView
+            android:id="@+id/text_winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="winner :"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="play again"
+            android:textSize="20dp"
+            android:onClick="reset"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/play_again"/>
+
+
+    </RelativeLayout>
 </RelativeLayout>
