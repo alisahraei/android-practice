@@ -225,6 +225,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   return false;
               }
           });
+//          list view
+        SubMenu listSubmenu = menu.addSubMenu("listveiw");
+        listSubmenu.add("simple list").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                startActivity(new Intent(MainActivity.this, simplelistAcrivity.class));
+                return false;
+            }
+        });
+
 
 
 
