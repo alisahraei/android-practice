@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".ToastActivity">
+
+    <Button
+        android:id="@+id/btnToast1"
+        android:layout_gravity="center_horizontal"
+        android:text="Simple Toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="simpletoast"/>
+    <Button
+        android:id="@+id/btnToast2"
+        android:layout_gravity="center_horizontal"
+        android:text="test color toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="textcolertaost"/>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:text="alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="testcolertaost"
+        android:tag="alert"/>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:text="warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="warning"
+        android:onClick="testcolertaost"/>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:text="info"
+        android:tag="info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="testcolertaost"/>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:text="success"
+        android:tag="success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="testcolertaost"/>
+    <Button
+        android:text="Image Toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="imageToast"
+        />
+</LinearLayout>
