@@ -12,6 +12,9 @@ public class VideoViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_view);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         VideoView vv = findViewById(R.id.videoView);
         vv.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.zan);
         MediaController controller = new MediaController(this);

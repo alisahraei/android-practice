@@ -234,6 +234,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return false;
             }
         });
+        listSubmenu.add("custom list").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                startActivity(new Intent(MainActivity.this, CustomListActivity.class));
+                return false;
+            }
+        });
 
 
 

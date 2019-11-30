@@ -35,6 +35,9 @@ public class play_ground extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_ground);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         msg_layout = findViewById(R.id.msg_layout);
         msg_layout.setVisibility(View.GONE);
     }

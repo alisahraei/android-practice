@@ -24,6 +24,9 @@ public class simplelistAcrivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simplelist_acrivity);
         listView = findViewById(R.id.listveiw);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         items = new ArrayList<>();
         prepareData();
         refreshDispley();

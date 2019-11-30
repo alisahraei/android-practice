@@ -43,6 +43,9 @@ public class SecondActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem itemOk = menu.add("OK");
         itemOk.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         itemOk.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem itemOk) {
