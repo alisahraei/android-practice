@@ -3,6 +3,7 @@ package com.ermile.first;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -41,6 +42,14 @@ public class CustomListActivity extends AppCompatActivity {
 //        contacts.add(new MyContact("Kambiz Dadmanesh", "09723456789", R.drawable.profile7));
 //        contacts.add(new MyContact("Milad Azizi", "09823456789", R.drawable.profile8));
 //        contacts.add(new MyContact("Naser Abdoli", "09923456789", R.drawable.profile9));
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
     private void addFakeContact(int n){
         for (int i = 0; i < n; i++){
