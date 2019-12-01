@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ToastActivity"></activity>
+        <activity android:name=".RadioButtonActivity"></activity>
+        <activity android:name=".ToastActivity" />
         <activity android:name=".CustomListActivity" />
         <activity android:name=".simplelistAcrivity" />
         <activity android:name=".dialActivity" />

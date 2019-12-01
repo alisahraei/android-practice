@@ -39,9 +39,9 @@ public class CustomListActivity extends AppCompatActivity {
         contacts.add(new MyContact("Erfan Alavi", "09523456789", R.drawable.profile5));
         addFakeContact(8);
         contacts.add(new MyContact("Aziz Isfahani", "09623456789", R.drawable.profile6));
-//        contacts.add(new MyContact("Kambiz Dadmanesh", "09723456789", R.drawable.profile7));
-//        contacts.add(new MyContact("Milad Azizi", "09823456789", R.drawable.profile8));
-//        contacts.add(new MyContact("Naser Abdoli", "09923456789", R.drawable.profile9));
+        contacts.add(new MyContact("Kambiz Dadmanesh", "09723456789", R.drawable.profile7));
+        contacts.add(new MyContact("Milad Azizi", "09823456789", R.drawable.profile8));
+        contacts.add(new MyContact("Naser Abdoli", "09923456789", R.drawable.profile9));
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
