@@ -21,6 +21,13 @@ public class RadioButtonActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_radio_buttin);
         radio_group = findViewById(R.id.radio_group);
+//        radio_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                RadioButton rb = findViewById(radio_group.getCheckedRadioButtonId());
+//                rb.setBackgroundResource(R.drawable.rb_a);
+//            }
+//        });
         btn = findViewById(R.id.btn);
         btn.setOnClickListener(this);
         if (getSupportActionBar() != null){

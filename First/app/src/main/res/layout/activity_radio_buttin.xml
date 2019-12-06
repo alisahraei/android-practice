@@ -3,16 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ndroid="http://schemas.android.com/apk/res-auto"
     tools:context=".RadioButtonActivity"
     android:orientation="vertical">
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:id="@+id/radio_group">
+        android:id="@+id/radio_group"
+        >
 
         <RadioButton
             android:id="@+id/rb1"
+            android:background="@drawable/rb_background"
+            android:padding="10dp"
+            android:button="@android:color/transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -23,6 +28,9 @@
         <RadioButton
             android:id="@+id/rb2"
             android:tag="2"
+            android:background="@drawable/rb_background"
+            android:padding="10dp"
+            android:button="@android:color/transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -35,15 +43,22 @@
             android:id="@+id/rb3"
             android:tag="3"
             android:layout_width="wrap_content"
+            android:button="@android:color/transparent"
             android:layout_margin="10dp"
+            android:background="@drawable/rb_background"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
-            android:text="Tabriz" />
+            android:text="Tabriz"
+            />
         <RadioButton
             android:id="@+id/rb4"
             android:tag="4"
             android:layout_width="wrap_content"
             android:layout_margin="10dp"
+            android:background="@drawable/rb_background"
+            android:padding="10dp"
+            android:button="@android:color/transparent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:text="Qom" />
