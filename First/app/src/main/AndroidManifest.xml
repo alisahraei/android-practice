@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".RatingBarActivity"></activity>
+        <activity android:name=".SpinnerActivity"></activity>
+        <activity android:name=".RatingBarActivity" />
         <activity android:name=".RadioButtonActivity" />
         <activity android:name=".ToastActivity" />
         <activity android:name=".CustomListActivity" />
