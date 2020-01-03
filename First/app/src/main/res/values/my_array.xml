@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="tours">
+        <item>کویرنوردی فردوس</item>
+        <item>تهران</item>
+        <item>کیش</item>
+        <item>اصفهان</item>
+        <item>شیراز</item>
+        <item>یزد</item>
+        <item>مشهد</item>
+        <item>تبریز</item>
+        <item>قشم</item>
+        <item>کرمان</item>
+    </string-array>
+</resources>
