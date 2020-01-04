@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,6 +28,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         initView();
+    }
+//  pref_screen
+    private void loadAppPrefValues() {
+        SharedPreferences appPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String username = appPref.getString("username" , "");
+        String userbio = appPref.getString("userbio" , "");
+        boolean viewimages = appPref.getBoolean("viewimages" , false);
+        boolean notifications = appPref.getBoolean("notifications" , true);
+        new AlertDialog.Builder(this)
+                        .setMessage("username : " + username + "\n" + "userbio : " + userbio + "\n" + "viewimages : " + viewimages + "\n" +
+                        "notification : " + notifications)
+                        .show();
+
+
     }
 
     private void initView() {
@@ -81,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 Intent intent = new Intent(MainActivity.this , SettingActivity.class);
                 startActivity(intent);
+                return false;
+            }
+        });
+        menu.add("load app pref...").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                loadAppPrefValues();
                 return false;
             }
         });

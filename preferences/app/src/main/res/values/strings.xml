@@ -8,10 +8,10 @@
         <item>مهندسی مکانیک</item>
     </array>
     <array name="pref_list_values">
-        <item>12001</item>
-        <item>12002</item>
-        <item>12003</item>
-        <item>12004</item>
-        <item>12005</item>
+        <item>bargh</item>
+        <item>compiuter</item>
+        <item>sanaye</item>
+        <item>shimi</item>
+        <item>mechanick</item>
     </array>
 </resources>
