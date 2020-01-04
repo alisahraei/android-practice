@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General settings">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="notifications"
+            android:title="Notifications"
+            android:summaryOn="با خبر"
+            android:summaryOff="بی خبر"/>
+        <RingtonePreference
+            android:key="notification_tone "
+            android:title="Notification Tone" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="viewimages"
+            android:title="View Images"
+            android:summaryOn="نمایش تصاویر"
+            android:summaryOff="عدم نمایش تصاویر" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="User">
+
+        <EditTextPreference
+            android:key="username"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="User Name"
+            android:inputType="textPersonName"
+            android:summary="ورود نام خانوادگی"/>
+        <EditTextPreference
+            android:singleLine="false"
+            android:inputType="textMultiLine"
+            android:key="userbio"
+            android:summary="خودتو معرفی من"
+            android:lines="4"
+            android:maxLines="6"
+            android:maxLength="300"
+            android:title="bio" />
+        <ListPreference
+            android:title="Field"
+            android:entries="@array/pref_list_entries"
+            android:entryValues="@array/pref_list_values"
+            android:key="field"/>
+        <MultiSelectListPreference
+            android:title="MultiSelect"
+            android:entries="@array/pref_list_entries"
+            android:entryValues="@array/pref_list_values"
+            android:key="multiselect_pref"/>
+    </PreferenceCategory>
+</PreferenceScreen>
