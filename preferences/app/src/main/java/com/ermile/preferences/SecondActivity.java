@@ -1,19 +1,18 @@
 package com.ermile.preferences;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
     EditText input_firstname, input_lastname, input_age;
     Button btn_save, btn_load;
     SharedPreferences pref;
@@ -24,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        pref = getPreferences(MODE_PRIVATE);
         pref = getSharedPreferences("myprefs" , MODE_PRIVATE);
-
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         initView();
     }
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("lastname", lastname);
                     editor.putInt("age", Integer.valueOf(agestr));
                     editor.apply();
-                    Toast.makeText(MainActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SecondActivity.this, "Saved", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 String firstname = pref.getString("firstname" , "not-found");
                 String lastname = pref.getString("lastname", "not-found");
                 int age = pref.getInt("age" , -1);
-                new AlertDialog.Builder(MainActivity.this)
+                new AlertDialog.Builder(SecondActivity.this)
                         .setTitle("pref. values")
                         .setMessage("firstname : " + firstname + "\n" + "lastname : " + lastname + "\n" + "age : " + (age == -1 ? "not-found" : age))
                         .show();
@@ -67,15 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("SecondActivity").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Intent intent = new Intent(MainActivity.this , SecondActivity.class);
-                startActivity(intent);
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
