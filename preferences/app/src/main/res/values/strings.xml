@@ -8,10 +8,10 @@
         <item>مهندسی مکانیک</item>
     </array>
     <array name="pref_list_values">
-        <item>bargh</item>
-        <item>compiuter</item>
-        <item>sanaye</item>
-        <item>shimi</item>
-        <item>mechanick</item>
+        <item>برق</item>
+        <item>کامپیوتر</item>
+        <item>صنایع</item>
+        <item>شیمی</item>
+        <item>مکانیک</item>
     </array>
 </resources>
