@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         if (view.getId() == R.id.btn_read_file){
             String content = readInternalFile(filename);
             inputContent.setText(content);
-            
+
         }else if (view.getId() == R.id.btn_create_file){
             if (inputContent.getText().toString().isEmpty()){
                 inputContent.setError("no content");
