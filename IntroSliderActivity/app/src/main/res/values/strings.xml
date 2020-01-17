@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">IntroSliderActivity</string>
+    <String name = "slide_1_title">Hello foold</String>
+    <String name = "slide_1_desc">this is test this is test this is test this is test this is test</String>
+
+
+    <String name = "slide_2_title">Movie Tickets</String>
+    <String name = "slide_2_desc">this is test this is test this is test this is test this is test</String>
+
+    <String name = "slide_3_title">Great Discounts</String>
+    <String name = "slide_3_desc">this is test this is test this is test this is test this is test</String>
+
+    <String name = "slide_4_title">Word Travel</String>
+    <String name = "slide_4_desc">this is test this is test this is test this is test this is test</String>
 </resources>
