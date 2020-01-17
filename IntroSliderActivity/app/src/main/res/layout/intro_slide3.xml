@@ -14,12 +14,12 @@
             android:layout_width="@dimen/slide_icon_wh"
             android:layout_height="@dimen/slide_icon_wh"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_discount" />
+            app:srcCompat="@drawable/ic_travel" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/slide_1_title"
+            android:text="@string/slide_3_title"
             android:textStyle="bold"
             android:textSize="@dimen/slide_title_text_size"
             android:layout_marginTop="20dp"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_gravity="center_horizontal"
-            android:text="@string/slide_1_desc"
+            android:text="@string/slide_3_desc"
             android:textSize="@dimen/slide_desc_text_size"
             android:gravity="center"
             android:textColor="@android:color/white"
