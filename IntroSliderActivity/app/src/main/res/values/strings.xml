@@ -15,4 +15,18 @@
     <string name="next">next</string>
     <string name="skip">skip</string>
     <string name="lets">lets start</string>
+    <string-array name="slide_titles">
+        <item>@string/slide_1_title</item>
+        <item>@string/slide_2_title</item>
+        <item>@string/slide_3_title</item>
+        <item>@string/slide_4_title</item>
+    </string-array>
+
+
+    <string-array name="slide_descriptions">
+        <item>@string/slide_1_desc</item>
+        <item>@string/slide_2_desc</item>
+        <item>@string/slide_3_desc</item>
+        <item>@string/slide_4_desc</item>
+    </string-array>
 </resources>

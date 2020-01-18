@@ -14,7 +14,7 @@
             android:layout_width="@dimen/slide_icon_wh"
             android:layout_height="@dimen/slide_icon_wh"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/ic_discount" />
+            app:srcCompat="@drawable/ic_food" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"

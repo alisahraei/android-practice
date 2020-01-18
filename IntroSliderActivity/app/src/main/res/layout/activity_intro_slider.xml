@@ -21,12 +21,13 @@
         android:layout_height="1dp"
         android:layout_above="@id/layoutDots"
         android:layout_marginBottom="5dp"
-        android:background="#C23D58"/>
+        android:background="@android:color/white"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_next"
+        android:textColor="@android:color/white"
         android:text="@string/next"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -39,6 +40,7 @@
         android:text="@string/skip"
         android:background="@null"
         android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
         android:layout_alignParentLeft="true"
         />
 </RelativeLayout>
