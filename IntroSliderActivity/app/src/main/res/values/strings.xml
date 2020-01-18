@@ -12,4 +12,7 @@
 
     <string name="slide_4_title">Word Travel</string>
     <string name="slide_4_desc">this is test this is test this is test this is test this is test</string>
+    <string name="next">next</string>
+    <string name="skip">skip</string>
+    <string name="lets">lets start</string>
 </resources>
