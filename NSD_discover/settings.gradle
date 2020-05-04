@@ -1,0 +1,2 @@
+rootProject.name='NSD_discover'
+include ':app'
