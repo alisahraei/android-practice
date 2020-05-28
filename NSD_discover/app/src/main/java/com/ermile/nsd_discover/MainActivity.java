@@ -2,6 +2,7 @@ package com.ermile.nsd_discover;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Channel channel;
     WifiP2pManager manager;
     Button btn_WIFi, btn_test;
+    Activity activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             // the Activity.
             int state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
             if (state == WifiP2pManager.WIFI_P2P_STATE_ENABLED) {
-                    activity.setIsWifiP2pEnabled(true);
+                activity.setIsWifiP2pEnabled(true);
             } else {
                 activity.setIsWifiP2pEnabled(false);
             }
